@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinball Básico</title>
+    <style>
+        #quadro {
+            position: relative;
+            width: 600px;
+            height: 800px;
+            border: 1px solid black;
+        }
+        
+        #bola {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+            top: 50%;
+            left: 50%;
+        }
+        
+        .obstaculo {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            background-color: blue;
+        }
+        
+        #obstaculo1 {
+            top: 200px;
+            left: 100px;
+        }
+        
+        #obstaculo2 {
+            top: 400px;
+            left: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="quadro">
+    <div id="bola"></div>
+    <div id="obstaculo1" class="obstaculo"></div>
+    <div id="obstaculo2" class="obstaculo"></div>
+</div>
+
+<script>
+    let bola = document.getElementById('bola');
+    let velocidadeX = 2;
+    let velocidadeY = 2;
+    let posicaoX = 300;
+    let posicaoY = 400;
+    let animacao;
+
+    function animar() {
+        posicaoX += velocidadeX;
+        posicaoY += velocidadeY;
+
+        bola.style.top = `${posicaoY}px`;
+        bola.style.left = `${posicaoX}px`;
+
+        // Colisão com as paredes
+        if (posicaoX <= 0 || posicaoX >= 580) {
+            velocidadeX *= -1;
+        }
+        if (posicaoY <= 0 || posicaoY >= 780) {
+            velocidadeY *= -1;
+        }
+
+        // Colisão com obstáculos
+        let obstaculo1 = document.getElementById('obstaculo1');
+        let obstaculo2 = document.getElementById('obstaculo2');
+
+        if (detectarColisao(bola, obstaculo1) || detectarColisao(bola, obstaculo2)) {
+            velocidadeY *= -1;
+        }
+
+        animacao = requestAnimationFrame(animar);
+    }
+
+    function detectarColisao(elemento1, elemento2) {
+        let rect1 = elemento1.getBoundingClientRect();
+        let rect2 = elemento2.getBoundingClientRect();
+
+        if (rect1.x < rect2.x + rect2.width &&
+            rect1.x + rect1.width > rect2.x &&
+            rect1.y < rect2.y + rect2.height &&
+            rect1.y + rect1.height > rect2.y) {
+            return true;
+        }
+        return false;
+    }
+
+    // Iniciar a animação
+    animar();
+
+    // Parar a animação após alguns segundos
+    setTimeout(() => {
+        cancelAnimationFrame(animacao);
+    }, 10000);
+</script>
+
+</body>
+</html>

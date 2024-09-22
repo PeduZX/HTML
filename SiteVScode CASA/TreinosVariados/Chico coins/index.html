@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Eu Tenteiiiiiiiii</title>
+    <link rel="website icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB+ElEQVR4AZSQAUQDYRiG/22Zq1upoRWaghKEAgUktqutnW4rUJBMUWpSSiSgWsFiUw20U4lEDsGQBkHlRKRIAEVAgu7evu2Wrmypj8ed917P/3/HsiP29qqBkhIIra0Q3G4IzU0QrDYE+XI4KipQ6XTCWQCXy9WSE8x4vSoYAxIJ4PQU2E4CoghMTMBJOSuG3W4IRtvbVcgydI8HWjQKLZOBnkoBS0too+KAxYI+ExLRT3SVlRmCMUFQcXEB1NZCD4ehPT4Cu7t453nIJEAhSJD5FEz6fCpWlqHPzkIPhqAdHUEbHMwVB4gElWPEhokYEeZ5QxCRpNw/0KanoUUi0B4eoO/vAQ5H8f1JwD5v0B8IqCkK43TluM2GeP6dMqxbGLaovG0imX+OlZYags2FhdwN/gWJT6qqDMHB8bHipdBP+Mj8na+sJ0839Tx2O8YlyRBEY7EW2gf0+mfK6+vfzs7PG1l2Xl5fueVQ6PaaPlzRCZc/MGcqdbJER0YUZp71tTX/s9X6p/1vqqvftpLJRmaee4BbnJ9P11DBTTTQaT+po7yG2JFlhRWaqbk5rqOzM/3b7kPDw+lDReFYsfEHg9yqKKbvqPxMPOX52AUgnpSfv6e+qYmDgRDo6+nhWDdt2uZjysrf3wOz+V4tre871q/fvGTrVgzNAJxpdAh+c/X/AAAAAElFTkSuQmCC">
+</head>
+<body>
+    <div class="painel">
+        <!-- Imagem pequena acima do título -->
+        <img src="https://as1.ftcdn.net/v2/jpg/05/89/90/98/1000_F_589909831_hv6kZROJrwMr9O9AsVXeWuERcNZOUIDc.jpg" alt="Imagem pequena" class="top-image">
+
+        <h1>Você me Ama?</h1>
+
+        <img src="https://c.tenor.com/OF697Z4kAlEAAAAd/tenor.gif" alt="">
+
+        <!-- Barra de pesquisa -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Digite aqui...">
+        </div>
+        
+        <!-- Link com o botão "Sim!" -->
+        <a href="https://www.youtube.com/watch?v=xtF8q0bmwnM"><button id="sim">Sim!</button></a>
+        <!-- Botão "Não!" que se move quando o mouse passa sobre ele -->
+        <button onmouseover="fuja()" id="nao">Não!</button>
+    </div>
+
+    <script>
+        // Função que move o botão "Não!" para uma posição aleatória na tela
+        function fuja(){
+            var botaoNao = document.getElementById("nao");
+
+            var larguraJanela = window.innerWidth; // Obtém a largura da janela
+            var alturaJanela = window.innerHeight; // Obtém a altura da janela
+
+            var maxX = larguraJanela - botaoNao.offsetWidth; // Calcula a posição máxima horizontal onde o botão pode estar
+            var maxY = alturaJanela - botaoNao.offsetHeight; // Calcula a posição máxima vertical onde o botão pode estar
+
+            var aleatorioX = Math.floor(Math.random() * maxX); // Gera uma posição horizontal aleatória
+            var aleatorioY = Math.floor(Math.random() * maxY); // Gera uma posição vertical aleatória
+
+            botaoNao.style.left = Math.max(0, aleatorioX) + "px"; // Define a posição horizontal do botão
+            botaoNao.style.top = Math.max(0, aleatorioY) + "px"; // Define a posição vertical do botão
+        }
+
+        // Função para animar o placeholder
+        function animatePlaceholder() {
+            const input = document.getElementById('search-input');
+            const text = "Eu TENTEIIIIIIIII...";
+            let index = 0;
+            let adding = true;
+
+            setInterval(() => {
+                if (adding) {
+                    input.placeholder = text.slice(0, index++);
+                    if (index > text.length) {
+                        adding = false;
+                        index = text.length;
+                    }
+                } else {
+                    input.placeholder = text.slice(0, index--);
+                    if (index < 0) {
+                        adding = true;
+                        index = 0;
+                    }
+                }
+            }, 150);
+        }
+
+        animatePlaceholder();
+    </script>
+</body>
+</html>

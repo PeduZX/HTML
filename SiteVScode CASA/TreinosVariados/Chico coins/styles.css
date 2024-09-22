@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    height: 100vh; 
+    background: linear-gradient(to right, 
+        red,      
+        red 50%,  
+        black 50%,
+        black     
+    );
+}
+
+.painel {
+    margin: auto; 
+    background-color: white; 
+    width: 500px; 
+    height: 520px; 
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    position: relative;
+    margin-top: 30px; 
+}
+
+.painel img.top-image {
+    position: absolute; 
+    top: -15px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80px; 
+    border-radius: 170px;
+    mix-blend-mode: darken;
+    border: none;
+    outline: none;
+}
+
+#sim {
+    height: 40px; 
+    width: 60px; 
+    background-color: red; 
+    border: 2px solid rgb(0, 0, 0); 
+    border-radius: 10px; 
+    color: white; 
+    cursor: pointer; 
+    margin-left: -100px;
+    margin-top: 15px;
+}
+
+#nao {
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    background-color: red;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    color: white;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+button {
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+}
+
+img {
+    height: auto;
+    width: 300px;
+    margin-top: 10px; 
+    border-radius: 15px; 
+} 
+
+.search-bar {
+    width: 200px;
+    height: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 180px;
+    margin-left: 10px;
+    border-radius: 100px;
+}
+
+body {
+    margin: 0;
+    height: 100vh; 
+    background: linear-gradient(to right, 
+        red,      
+        red 50%,  
+        black 50%,
+        black     
+    );
+}
+
+.painel {
+    margin: auto; 
+    background-color: white; 
+    width: 500px; 
+    height: 520px; 
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    position: relative;
+    margin-top: 30px; 
+}
+
+.painel img.top-image {
+    position: absolute; 
+    top: -15px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80px; 
+    border-radius: 150px;
+}
+
+#sim {
+    height: 40px; 
+    width: 60px; 
+    background-color: red; 
+    border: 2px solid rgb(0, 0, 0); 
+    border-radius: 10px; 
+    color: white; 
+    cursor: pointer; 
+    margin-left: -100px;
+    margin-top: 15px;
+    flex-direction: space-around;
+}
+
+#nao {
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    background-color: red;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    color: white;
+    margin-left: 50px;
+    margin-top: 15px;
+    flex-direction: space-around;
+}
+
+button {
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+}
+
+img {
+    margin-top: 10px; 
+    border-radius: 15px; 
+} 
+
+.search-bar {
+    width: 200px;
+    height: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    margin-top: 10px;
+    margin-left: 150px;
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 180px;
+    margin-left: 15px;
+    border-radius: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+

@@ -1,0 +1,63 @@
+.pinball {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #000;
+    margin: 40px auto;
+    position: relative;
+  }
+  
+  .tabela {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+  
+  .bola {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .pino-1, .pino-2, .pino-3, .pino-4, .pino-5, .pino-6, .pino-7, .pino-8, .pino-9, .pino-10 {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .pino-1 { top: 20px; left: 20px; }
+  .pino-2 { top: 20px; left: 120px; }
+  .pino-3 { top: 20px; left: 220px; }
+  .pino-4 { top: 120px; left: 20px; }
+  .pino-5 { top: 120px; left: 120px; }
+  .pino-6 { top: 120px; left: 220px; }
+  .pino-7 { top: 220px; left: 20px; }
+  .pino-8 { top: 220px; left: 120px; }
+  .pino-9 { top: 220px; left: 220px; }
+  .pino-10 { top: 320px; left: 20px; }
+  
+  .controles {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .botao-esquerdo, .botao-direito, .botao-cima, .botao-baixo {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .botao-esquerdo { margin-right: 10px; }
+  .botao-direito { margin-left: 10px; }

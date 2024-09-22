@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>Ama?</title>
+
+    <style>
+        body{
+            background-color: plum;
+            
+        }
+
+        .painel{
+            margin: auto;
+            background-color: pink;
+            width: 500px;
+            height: 530px;
+            border-radius: 40px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 30px;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -80px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: rgb(0, 0, 0);
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 30px;
+        }
+        img{
+            width: 400px;
+            height: 300px;
+            border-radius: 10px ;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1> Voce me Ama?</h1>
+
+        <img src="https://25.media.tumblr.com/tumblr_lol5gwTagT1qlj1r6o1_500.gif" alt="">
+
+        <h2>TESTE </h2>
+        
+
+        <a href="https://youtu.be/KXw8CRapg7k?si=ehlOR2lWDRsZpuPw&t=40"><button id="sim" > Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+</body>
+</html>
