@@ -1,0 +1,17 @@
+.div3{
+    margin-left: 600px;
+   margin-top: -80px;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+table{
+    display: inline-block;
+}
+body{
+    background-color: whitesmoke;
+}
+.noticiaTitulo{
+    font-size:larger;
+    margin-left: 60px;
+}
