@@ -52,3 +52,10 @@ li {
     text-align: left;
     font-family: 'Roboto', sans-serif;
 }
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+        margin: 0;
+        display: block;
+    }
+}
