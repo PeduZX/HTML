@@ -59,3 +59,25 @@ li {
         display: block;
     }
 }
+footer {
+    background-color: sandybrown;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 353px;
+    position: relative;
+    border-radius: 10px;
+    
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
